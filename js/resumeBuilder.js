@@ -127,8 +127,8 @@ function displayProject(){
 		$(".project-entry:last").append(formattedDates);
 		var formattedDescription = HTMLworkDescription.replace("%data%", projects.projects[project].description);
 		$(".project-entry:last").append(formattedDescription);
-		var formattedImage = HTMLprojectImage.replace("%data%",projects.projects[project].images);
-		$(".project-entry:last").append(formattedImage);
+		// var formattedImage = HTMLprojectImage.replace("%data%",projects.projects[project].images);
+		// $(".project-entry:last").append(formattedImage);
 
 	}
 	
