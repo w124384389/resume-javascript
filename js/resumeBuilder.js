@@ -1,9 +1,9 @@
 var projects ={
 	"projects":[
-		{"title": "protfolio",
+		{"title": "chen-wang.net",
 		"dates":"08/2015-present",
-		"description": "A page shows all about me",
-		"images": "images/fry.jpg"
+		"description": "My portfolio site that shows all my project",
+		"images": "images/drawing.png"
 		}
 	]
 
@@ -18,7 +18,7 @@ var bio ={
 	},
 	"bioPic": "images/profile.jpg",
 	"welcomeMessage": "Hi, this is Chen",
-	"skills":["JS","HTML","CSS","Git&GitHub","C++","BootStrap"]
+	"skills":["JS","HTML","CSS","Git&GitHub","C++","jQuery","AJAX","BootStrap"]
 };
 var education = {
 	"school": "Hanover College",
@@ -83,7 +83,7 @@ bio.display = function(){
 	var formattedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
 	var formattedEmail = HTMLemail.replace("%data%",bio.contacts.email);
 	var formattedlocation = HTMLlocation.replace("%data%",bio.contacts.location);
-	$("#topContacts").append(formattedMobile,formattedEmail,formattedlocation);
+	$("#footerContacts").append(formattedMobile,formattedEmail,formattedlocation);
 
 }
 
@@ -127,6 +127,8 @@ function displayProject(){
 		$(".project-entry:last").append(formattedDates);
 		var formattedDescription = HTMLworkDescription.replace("%data%", projects.projects[project].description);
 		$(".project-entry:last").append(formattedDescription);
+		var formattedImage = HTMLprojectImage.replace("%data%",projects.projects[project].images);
+		$(".project-entry:last").append(formattedImage);
 
 	}
 	
